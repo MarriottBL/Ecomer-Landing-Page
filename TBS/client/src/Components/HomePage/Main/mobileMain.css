@@ -1,0 +1,148 @@
+/* Header Background */
+.header-background {
+    height: 200px;
+    background: linear-gradient(to bottom, #001831 70%, #f9f38c 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+/* Overlapping Box */
+.overlapping-box {
+    position: relative;
+    top: -50px;
+    width: 92%;
+    border-radius: 12px;
+    margin: 0 auto ;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-right: 10%;
+    z-index: 1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Profile Image Wrapper */
+.profile-image-wrapper {
+    position: fixed;
+    top: -70px;
+    width: 135px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Social Media Section */
+.top-right-section {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+/* Profile Content */
+.profile-content {
+    margin-top: 20px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.profile-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.profile-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.profile-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 15px auto;
+    max-width: 100%;
+}
+
+/* Tab Icons */
+.tab-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+    flex-wrap: wrap;
+}
+
+.tab-icons .tab-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-icons .tab-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+.tab-icons .tab-icon span {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header-background {
+        height: 220px;
+    }
+
+    .overlapping-box {
+        width: 90%;
+        top: -70px;
+    }
+
+    .profile-image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-content {
+        margin-top: -20px;
+    }
+
+    .profile-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .profile-content h4 {
+        font-size: 1.3rem;
+    }
+
+    .profile-content p {
+        font-size: 1rem;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+    }
+}

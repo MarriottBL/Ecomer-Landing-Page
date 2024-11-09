@@ -1,0 +1,57 @@
+# Ignore environment variables
+.env
+
+# Ignore node_modules folders in both client and server
+client/node_modules/
+server/node_modules/
+
+# Ignore logs
+logs
+*.log
+
+# Ignore local environment settings
+.vscode/
+.DS_Store
+
+# Ignore build files (if you're using something like React)
+
+# Media files
+/uploads
+/public/uploads
+/storage
+*.jpg
+*.png
+*.gif
+/assets/images/personal/
+
+# Dependencies
+/node_modules
+/vendor
+/.pnp
+.pnp.js
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local development
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.*
+.env-production
+.env.local
+.env.development
+.env.test
+
+# Personal/Sensitive files
+*.pem
+*.key
+*.cert
+config/secrets.yml

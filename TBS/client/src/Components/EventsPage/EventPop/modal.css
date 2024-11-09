@@ -1,0 +1,84 @@
+/* Modal Styles */
+.dialog-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.dialog-title {
+    font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+    font-weight: bold;
+    color: #006699; /* Vibrant color for title */
+    margin-bottom: 15px;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.dialog-actions button {
+    background-color: #006699; /* Match with title */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dialog-actions button:hover {
+    background-color: #004466; /* Darken on hover */
+}
+
+.dialog-actions button:focus {
+    outline: none;
+}
+
+/* Animation for Modal */
+.dialog-container {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Adjust image container and image styling */
+.image-container {
+    width: 100% !important;
+    height: auto !important; /* Changed from fixed height */
+    max-height: 70vh !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: transparent !important; /* Removed background color */
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+    position: relative !important;
+}
+
+.event-image {
+    width: auto !important; /* Changed from 100% */
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 70vh !important;
+    object-fit: contain !important;
+    padding: 0 !important; /* Removed padding */
+    display: block !important;
+    margin: 0 auto !important;
+}

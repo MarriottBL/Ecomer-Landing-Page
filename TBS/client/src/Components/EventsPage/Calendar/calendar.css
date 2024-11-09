@@ -1,0 +1,118 @@
+/* Calendar Wrapper */
+    .rbc-calendar {
+        background-color: #fff;
+        border: 1px solid #f3f3f3;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        font-family: 'Arial', sans-serif;
+        width: 100%; /* Set width to 100% to make it responsive */
+        max-width: 1200px; /* Increase maximum width */
+        height: 600px; /* Allow height to auto-adjust */
+        margin: 0 auto; /* Center align the calendar */
+    }
+    
+    /* Header - Back and Next Buttons */
+    .rbc-toolbar button {
+        background-color: #001831;
+        border: none;
+        padding: 10px 15px;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+    
+    .rbc-toolbar button:hover {
+        background-color: #fffd7e;
+    }
+    
+    .rbc-toolbar span {
+        font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+        color: #333333;
+    }
+    
+    /* Calendar Cells */
+    .rbc-month-view {
+        background-color: #f5f5f5;
+        font-size: 0.9em
+    }
+    
+    .rbc-day-bg {
+        background-color: #dddddd;
+        border: 1px solid #cfcfcf
+    }
+    
+    .rbc-off-range-bg {
+        background-color: #fafafa;
+    }
+    
+    .rbc-today {
+        background-color: #ffe680; /* Highlight current day */
+        color: #fff;
+    }
+    
+    .rbc-day-bg:hover {
+        background-color: #ffe680; /* Slight hover effect on day cells */
+    }
+    
+    /* Event Style - Line appearance with better text visibility */
+    .rbc-event {
+        background-color: #69ee65;
+        border: none;
+        margin: 1px 0;
+    }
+
+    .calendar-event {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .calendar-event p {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: white;
+        font-weight: 500;
+    }
+
+    .rbc-event:hover {
+        background-color: #69ee65;
+        color: #fff;
+        transform: scale(1.1);
+        z-index: 1000;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Calendar Day/Month Labels */
+    .rbc-header {
+        padding: 10px;
+        background-color: #001831; /* Header color */
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid #2a86aa;
+    }
+
+    /* Medium screens (tablets) */
+    @media (max-width: 1024px) {
+        .rbc-calendar {
+            max-width: 90%;
+        }
+        .rbc-toolbar span {
+            font-size: 2rem; /* Smaller font */
+        }
+    }
+
+    /* Small screens (mobile) */
+    @media (max-width: 768px) {
+        .rbc-calendar {
+            max-width: 100%;
+        }
+        .rbc-toolbar span {
+            font-size: 1.5rem; /* Smaller font for mobile */
+        }
+    }

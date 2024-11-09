@@ -1,0 +1,223 @@
+    .header-background {
+        background: linear-gradient(to bottom, #001831 70%, #f9f38c 100%); /* or use your background image */
+        width: 100vw;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .overlapping-box {
+        position: absolute;
+        top: 120px; /* Adjust this to control how much the box overlaps */
+        left: 50%;
+        transform: translateX(-50%); /* Centers the box horizontally */
+        width: 80%; /* Adjust the width to control how wide the box is */
+        background-color: #e6e4e4; /* White background for contrast */
+        padding: 20px;
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Optional shadow to make it pop */
+        z-index: 10; /* Higher z-index to overlap the header */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Profile image wrapper to handle overlap */
+    .profile-image-wrapper {
+        position: fixed;
+        top: -90px; /* Adjust to overlap */
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        width: 235px;
+        height: 210px;
+        overflow: hidden;
+        border: 0px solid #fff;
+        background-color: #fff;
+        z-index: 20;
+    }
+
+    /* Top-right section (social media + registration) */
+    .top-right-section {
+        position: absolute;
+        top: 25px;
+        right: 100px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        z-index: 15;
+        margin-right: 95px;
+    }
+
+    /* Social Media Icons Container */
+    .social-media-icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-right: 5px;
+    }
+
+    /* Common icon styling */
+    .icon {
+        width: 35px; /* Increased base size */
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+    }
+
+    /* Instagram specific sizing */
+    .fa-instagram {
+        width: 35px; /* Increased to match others */
+        height: 35px;
+        scale: 1.2; /* Slightly scale up the Instagram icon */
+    }
+
+    /* Facebook icon */
+    .fa-facebook {
+        width: 30px;
+        height: 29px;
+    }
+
+    /* Social media icons */
+    .social-media-icons a {
+        color: #2a86aa;
+        margin: 0 10px;
+        font-size: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+        text-decoration: none;
+    }
+    
+    .social-media-icons a:hover {
+        color: #54c2ee; /* Hover color */
+        transition: color 0.3s ease;
+    }
+
+    .fa-instagram{
+        width: 30px;
+    }
+    
+    /* Registration link/icon */
+    .registration-link {
+        color: #3d8754;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        background: none;
+        border: none;
+        height: 35px;
+    }
+    
+    .register-icon {
+        width: 29px;
+        height: 30px;
+    }
+
+    /* Ensures the profile image fits well */
+    .profile-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Center text styling */
+    .profile-content {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .profile-content h2 {
+        font-size: clamp(1.5rem, 2vw + 0.5rem, 2.5rem);
+        margin: 10px 0;
+        font-family: Montserrat;
+    }
+
+    .profile-content h4 {
+        font-size: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
+        color: #777;
+    }
+
+    .profile-content p {
+        margin: 15px auto;
+        max-width: 500px;
+        color: #666;
+        font-size: 15px;
+        font-family: 'sans-serif';
+    }
+
+    .profile-content a {
+        margin: 0 10px;
+        color: #2a86aa;
+        text-decoration: none;
+    }
+
+    .profile-content a:hover {
+        color: #f2fc9d; /* Add a hover effect */
+    }
+
+    /* Add a smooth transition to the tab content */
+    .tab-content {
+        opacity: 0; /* Start hidden */
+        transition: opacity 1.0s ease-in-out; /* Smooth fade transition */
+        display: none; /* Initially hide all content */
+    }
+
+    /* Active tab content styling */
+    .tab-content.active {
+        opacity: 1; /* Fully visible */
+        display: block; /* Show the active tab content */
+    }
+
+    /* Adjust header height for smaller screens */
+    @media (max-width: 768px) {
+        .header-background {
+            height: 200px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .overlapping-box {
+            width: 90%;
+        }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .top-right-section {
+            top: 10px;
+            right: 10px;
+            gap: 6px;
+        }
+
+        .social-media-icons {
+            gap: 6px;
+        }
+
+        /* Keep all icons the same size on mobile */
+        .icon,
+        .fa-instagram,
+        .fa-facebook,
+        .register-icon {
+            width: 20px; /* Slightly larger on mobile */
+            height: 30px;
+        }
+
+        .fa-instagram {
+            scale: 1.2; /* Maintain scale on mobile */
+        }
+
+        .registration-link {
+            height: 30px;
+        }
+    }
+
+    /* Optional: if you need to adjust the ORDER NOW button specifically */
+    .order-now-button {
+        margin-left: 15px;
+    }
